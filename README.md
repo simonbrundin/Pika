@@ -1,33 +1,29 @@
-## Why? Todo lists are broken.
+# Nuxt 3 Minimal Starter
 
-1. Manually choosing your next task causes friction and wastes precious decision-making energy
-2. Humans tend to choose the easiest task next, rather than the most important + urgent
-3. They do nothing to keep you focused on the current task
+We recommend to look at the [documentation](https://v3.nuxtjs.org).
 
-The result is tasks continually rolling over to the next day, a cycle of inefficiency.
-https://getslash.co/
+## Setup
 
-## Features
+Make sure to install the dependencies
 
-- Global Shortcut - Easily add tasks that come up from any app without interrupting your flow
-- Automatic Link Opening - Automatically open up any web links in the task notes when you start the task.
-- Drag & Drop Reorder - Ändra ordningen på målen genom att bara dra dem
-- WASD Reorder - Ändra ordningen på målen genom att klicka på WASD-tangenterna
-- Fokusruta - Your current task stays pinned on screen so you know where to focus, at all times.
-- Ikoner - Ikon för målet som sätts efter vilken text det har. Tex Telefon om det står 'Ring ...'
+```bash
+yarn install
+```
 
-## ToDo
+## Development
 
-- Skapa wireframe
-- Lära mig skapa en todo-app med subtasks
-- Fundera ut vad jag vill se överst. Gör nu eller nästa aktivitet
-- Se till att vanor prioriteras högst - Se till så jag alltid slutför dagens vanor - ma
+Start the development server on http://localhost:3000
 
+```bash
+yarn dev
+```
 
-## Idéer
+## Production
 
-- Om man tryckt bort ett mål ett visst antal gånger, hjälp en då att förstå varför man åtsidosätter målet
-- https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.svd.se%2F5-forbluffande-fakta-om-din-biologiska-klocka&psig=AOvVaw1XOhmeAbpxp3iZLNpcUlyU&ust=1618233470268000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLC57cqj9u8CFQAAAAAdAAAAABAD
-- Möjliga namn - Intensions
-- Halvårsvy som scrollar fram automatiskt
-- 
+Build the application for production:
+
+```bash
+yarn build
+```
+
+Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
