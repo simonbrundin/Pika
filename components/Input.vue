@@ -4,8 +4,8 @@
   </div>
 </template>
 
-<script setup>
-const text = "Skriv av dig här";
+<script setup lang="ts">
+const text: string = "Skriv av dig här";
 </script>
 
 <style scoped></style>
