@@ -1,5 +1,7 @@
 <template>
-  <div><TaskList /><Input class="mt-4" /></div>
+  <div class="p-4">
+    <NuxtPage />
+  </div>
 </template>
 
 <script setup lang="ts"></script>

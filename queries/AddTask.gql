@@ -1,0 +1,8 @@
+mutation AddTask($title: String) {
+  insert_task(objects: { title: $title, user_id: 1 }) {
+    returning {
+      id
+      title
+    }
+  }
+}

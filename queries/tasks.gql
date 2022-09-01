@@ -1,6 +1,0 @@
-query MyTasks {
-  task(where: { id: { _eq: 1 } }) {
-    id
-    title
-  }
-}

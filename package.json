@@ -5,12 +5,15 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "tailwind": "tailwind-config-viewer -o"
   },
   "devDependencies": {
+    "@nuxtjs/tailwindcss": "^5.3.2",
     "nuxt": "3.0.0-rc.8"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.1",
     "nuxt-graphql-client": "^0.1.12"
   }
 }

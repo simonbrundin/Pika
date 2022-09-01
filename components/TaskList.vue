@@ -3,12 +3,11 @@
     <div v-for="(task, index) in data.task" :key="index">
       {{ task.title }}
     </div>
-    {{ data }}
   </div>
 </template>
 
 <script setup lang="ts">
-const { data } = await useAsyncGql("MyTasks");
+const { data } = await useAsyncGql("AllTasks");
 </script>
 
 <style scoped></style>
