@@ -8,6 +8,7 @@
 
 <script setup lang="ts">
 const { data } = await useAsyncGql("AllTasks");
+console.log("Hämtat");
 </script>
 
 <style scoped></style>
