@@ -1,5 +1,5 @@
 <template>
-  <div><Input /></div>
+  <div><Input /> <TaskList /></div>
 </template>
 
 <script setup lang="ts"></script>

@@ -1,5 +1,6 @@
-# query AllTasks {
-#   task(where: { user_id: { _eq: 1 } }) {
-#     id
-#   }
-# }
+query MyTasks {
+  task(where: { id: { _eq: 1 } }) {
+    id
+    title
+  }
+}
