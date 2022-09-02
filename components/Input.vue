@@ -19,7 +19,7 @@ let text: string;
 const addTask = (title) => {
   GqlAddTask({ title }).then(() => {
     emit("taskAdded");
-    console.log("emittat");
+    console.log("emitted");
   });
 };
 </script>
