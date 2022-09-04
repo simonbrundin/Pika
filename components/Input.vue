@@ -14,11 +14,11 @@
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits(["taskAdded"]);
+const emit = defineEmits(["goalAdded"]);
 let text: string;
 const addGoal = (title) => {
   GqlAddGoal({ title }).then(() => {
-    emit("taskAdded");
+    emit("goalAdded");
   });
 };
 </script>

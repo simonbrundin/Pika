@@ -1,6 +1,5 @@
-import { useStore } from "@/stores/store";
-export default function () {
-  const store = useStore();
-  const { data } = useAsyncGql("Categories");
-  return data;
+export default async function () {
+  const { data } = await useAsyncGql("Categories");
+  const categories: object[] = data.value.goal;
+  return categories;
 }

@@ -1,13 +1,15 @@
 <template>
   <div>
-    <div v-for="(goal, index) in categories.goal" :key="index">
+    <div v-for="(goal, index) in store.categories" :key="index">
       {{ goal.title }}
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const categories = await getCategories();
+import { useStore } from "@/stores/store";
+const store = useStore();
+updateCategories();
 </script>
 
 <style scoped></style>
