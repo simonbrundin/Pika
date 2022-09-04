@@ -1,5 +1,5 @@
-query AllTasks {
-  task(where: { user_id: { _eq: 1 } }) {
+query AllGoals {
+  goal(where: { user_id: { _eq: 1 } }) {
     id
     title
   }

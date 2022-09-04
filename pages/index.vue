@@ -8,7 +8,6 @@
 let update: number = 0;
 const updateTaskList = () => {
   update++;
-  console.log("här");
 };
 </script>
 

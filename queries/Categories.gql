@@ -1,0 +1,17 @@
+query Categories {
+  goal(
+    where: {
+      user_id: { _eq: 1 }
+      _not: { parents: { id: { _is_null: false } } }
+    }
+  ) {
+    id
+    title
+    children {
+      goal {
+        title
+        id
+      }
+    }
+  }
+}

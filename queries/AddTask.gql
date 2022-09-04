@@ -1,5 +1,5 @@
-mutation AddTask($title: String) {
-  insert_task(objects: { title: $title, user_id: 1 }) {
+mutation AddGoal($title: String) {
+  insert_goal(objects: { title: $title, user_id: 1 }) {
     returning {
       id
       title
