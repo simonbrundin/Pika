@@ -10,12 +10,12 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.3.2",
-    "nuxt": "3.0.0-rc.8"
+    "nuxt": "3.0.0-rc.9"
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.33.1",
     "@pinia/nuxt": "^0.4.1",
-    "nuxt-graphql-client": "^0.1.12",
+    "nuxt-graphql-client": "^0.1.17",
     "pinia": "^2.0.21"
   }
 }

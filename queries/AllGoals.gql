@@ -2,5 +2,8 @@ query AllGoals {
   goal(where: { user_id: { _eq: 1 } }) {
     id
     title
+    parents {
+      parent_id
+    }
   }
 }

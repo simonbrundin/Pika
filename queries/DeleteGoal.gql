@@ -1,0 +1,12 @@
+mutation DeleteGoal($id: Int) {
+  delete_goal_parent(where: { goal_id: { _eq: $id } }) {
+    returning {
+      id
+    }
+  }
+  delete_goal(where: { id: { _eq: $id } }) {
+    returning {
+      id
+    }
+  }
+}

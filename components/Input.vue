@@ -14,12 +14,21 @@
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits(["goalAdded"]);
+import { useStore } from "@/stores/store";
+const store = useStore();
 let text: string;
-const addGoal = (title) => {
-  GqlAddGoal({ title }).then(() => {
-    emit("goalAdded");
+const addGoal = async (title) => {
+  const { data: goals } = await useAsyncGql({
+    operation: "AddGoal",
+    variables: { title },
   });
+  const goalID = goals.value.insert_goal.returning[0].id;
+
+  const { data } = await useAsyncGql({
+    operation: "AddParent",
+    variables: { goal_id: goalID, parent_id: store.goalInFocus },
+  });
+  updateAllGoals();
 };
 </script>
 
