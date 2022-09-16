@@ -1,10 +1,10 @@
+import { useStore } from "@/stores/store";
 export default async function (id: number) {
-  const { data } = await useAsyncGql({
+  const store = useStore();
+  const goalsWithoutRemovedGoal = store.goals.filter((goal) => goal.id !== id);
+  store.goals = goalsWithoutRemovedGoal;
+  const { data: removed } = await useAsyncGql({
     operation: "DeleteGoal",
     variables: { id: id },
   });
-  setTimeout(function () {
-    updateAllGoals();
-    //your code to be executed after 1 second
-  }, 5000);
 }

@@ -7,7 +7,7 @@ export const useStore = defineStore("store", {
       // all these properties will have their type inferred automatically
       goals: [],
       categories: [],
-      goalInFocus: 1,
+      goalInFocus: 0,
       baseName: "Mitt liv",
     };
   },
@@ -15,19 +15,20 @@ export const useStore = defineStore("store", {
 
   getters: {
     children(state) {
-      if (state.goalInFocus === 0) {
-        let array = state.goals.filter(function (goal) {
-          return goal.parents.length === 0;
+      return (parent_id: number) => {
+        if (parent_id === 0) {
+          let array = state.goals.filter(function (goal) {
+            return goal.parents.length === 0;
+          });
+          return array;
+        }
+        let children = state.goals.filter(function (goal) {
+          return (
+            goal.parents.length > 0 && goal.parents[0].parent_id === parent_id
+          );
         });
-        return array;
-      }
-      let children = state.goals.filter(function (goal) {
-        return (
-          goal.parents.length > 0 &&
-          goal.parents[0].parent_id === state.goalInFocus
-        );
-      });
-      return children;
+        return children;
+      };
     },
     currentGoal(state) {
       if (state.goalInFocus === 0) {
