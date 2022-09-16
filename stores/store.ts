@@ -23,9 +23,9 @@ export const useStore = defineStore("store", {
           return array;
         }
         let children = state.goals.filter(function (goal) {
-          return (
-            goal.parents.length > 0 && goal.parents[0].parent_id === parent_id
-          );
+          return goal.parents.some(function (parent) {
+            return parent.parent_id === parent_id;
+          });
         });
         return children;
       };
