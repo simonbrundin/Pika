@@ -5,6 +5,6 @@ export default async function () {
     operation: "AllGoals",
   });
   const goals: object[] = data.value.goal;
-  console.log(goals.length);
+  // console.log(goals.length);
   store.goals = goals;
 }
