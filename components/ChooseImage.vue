@@ -13,13 +13,13 @@ const options = {
   },
 };
 
-await useFetch(
-  "https://bing-image-search1.p.rapidapi.com/images/details?insightsToken=%3CREQUIRED%3E",
-  options
-)
-  .then((response) => response.json())
-  .then((response) => console.log(response))
-  .catch((err) => console.error(err));
+// await useFetch(
+//   "https://bing-image-search1.p.rapidapi.com/images/details?insightsToken=%3CREQUIRED%3E",
+//   options
+// )
+//   .then((response) => response.json())
+//   .then((response) => console.log(response))
+//   .catch((err) => console.error(err));
 const query: string = "notion";
 const url: string =
   "https://www.google.com.ua/search?source=lnms&sa=X&gbv=1&tbm=isch&q=cat";
