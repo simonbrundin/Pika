@@ -1,0 +1,7 @@
+{
+  "name": "Mooni",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
