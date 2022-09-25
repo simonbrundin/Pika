@@ -12,7 +12,8 @@
     "@capacitor/cli": "4.3.0",
     "@nuxtjs/tailwindcss": "^5.3.2",
     "nuxt": "^3.0.0-rc.9",
-    "nuxt-ionic": "^0.7.0"
+    "nuxt-ionic": "^0.7.0",
+    "vitest": "^0.23.4"
   },
   "dependencies": {
     "@capacitor/app": "4.0.1",
