@@ -14,5 +14,6 @@ const store = useStore();
 <style scoped>
 .current {
   font-size: 2em;
+  color: black;
 }
 </style>

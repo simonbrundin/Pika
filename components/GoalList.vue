@@ -1,29 +1,32 @@
 <template>
-  <div class="flex flex-col">
-    <div
+  <ion-list class="flex flex-col">
+    <ion-item
       v-for="(goal, index) in store.children(store.goalInFocus)"
       :key="index"
-      class="bg-slate-50 shadow-xl px-6 py-4 rounded-full flex justify-between m-1"
+      class="flex justify-between"
       @click="setGoalInFocus(goal.id)"
     >
-      <div class="flex justify-start">
-        <div @click="goal.done = true" v-if="false">☉</div>
-        <div :class="{ done: goal.done }">
-          {{ goal.title }}
+      <ion-label>
+        <div class="flex justify-start">
+          <div @click="goal.done = true" v-if="false">☉</div>
+          <div :class="{ done: goal.done }">
+            {{ goal.title }}
+          </div>
         </div>
-      </div>
-      <div class="flex justify-end">
-        <div
-          @click="deleteGoal(goal.id)"
-          class="mr-4"
-          v-if="store.children(goal.id).length === 0"
-        >
-          x
+        <div class="flex justify-end">
+          <div
+            @click="deleteGoal(goal.id)"
+            class="mr-4"
+            v-if="store.children(goal.id).length === 0"
+          >
+            x
+          </div>
+
+          <div @click="editGoal(goal.id)">⦂</div>
         </div>
-        <div @click="editGoal(goal.id)">⦂</div>
-      </div>
-    </div>
-  </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </template>
 
 <script setup lang="ts">

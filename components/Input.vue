@@ -1,16 +1,14 @@
 <template>
   <div>
-    <input
+    <ion-input
       type="text"
       name="text"
       v-model="text"
       placeholder="Målnamn"
-      class="border-slate-600 border-2 px-5 py-2 rounded-full mr-2"
+      class="border-2 px-5 py-2 rounded-lg mr-2 text-black"
       @keyup.enter="newGoal(text)"
     />
-    <button @click="newGoal(text)" class="rounded-full bg-green-600 px-4 py-2">
-      Lägg till
-    </button>
+    <ion-button @click="newGoal(text)"> Lägg till </ion-button>
   </div>
 </template>
 

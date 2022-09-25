@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center">
+  <div class="flex justify-center" @keyup.Enter="log()">
     <div
       v-for="goal in store.parents"
       :key="goal.id"
@@ -20,10 +20,19 @@
 <script setup lang="ts">
 import { useStore } from "@/stores/store";
 const store = useStore();
+const log = () => console.log("ok");
+window.addEventListener("keyup", (e) => {
+  console.log(e.key.toString());
+  switch (e.key.toString()) {
+    case "Enter":
+      setGoalInFocus(1);
+  }
+});
 </script>
 
 <style scoped>
 .parent {
   font-size: 1em;
+  color: black;
 }
 </style>
