@@ -9,6 +9,7 @@
       {{ goal.title }}
     </div>
     <div
+      class="parent"
       v-if="store.parents.length === 0 && store.currentGoal.id !== 0"
       @click="setGoalInFocus(0)"
     >
