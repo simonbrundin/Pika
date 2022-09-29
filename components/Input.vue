@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ion-input
+    <input
       type="text"
       name="text"
       v-model="text"
@@ -8,7 +8,7 @@
       class="border-2 px-5 py-2 rounded-lg mr-2 text-black"
       @keyup.enter="newGoal(text)"
     />
-    <ion-button @click="newGoal(text)"> Lägg till </ion-button>
+    <ion-button @click="newGoal(text)" class="m-0"> Lägg till </ion-button>
   </div>
 </template>
 

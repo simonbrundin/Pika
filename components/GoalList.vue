@@ -3,11 +3,11 @@
     <ion-item
       v-for="(goal, index) in store.children(store.goalInFocus)"
       :key="index"
-      class="flex justify-between"
+      class="flex justify-between border-black border-2 m-1"
       @click="setGoalInFocus(goal.id)"
     >
-      <ion-label>
-        <div class="flex justify-start">
+      <div class="flex justify-between flex-row w-full">
+        <div class="justify-start">
           <div @click="goal.done = true" v-if="false">☉</div>
           <div :class="{ done: goal.done }">
             {{ goal.title }}
@@ -21,10 +21,9 @@
           >
             x
           </div>
-
           <div @click="editGoal(goal.id)">⦂</div>
         </div>
-      </ion-label>
+      </div>
     </ion-item>
   </ion-list>
 </template>
